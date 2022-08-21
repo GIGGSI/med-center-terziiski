@@ -1,0 +1,43 @@
+.chevron-wrapper {
+    height: 12vw;
+    width: 12vw;
+    position: fixed;
+    overflow: hidden;
+    right: 0;
+    z-index: 999;
+    transition: 0.2s ease-in;
+    top: 85%;
+    color: var(--primary-color);
+  }
+  .chevron-wrapper-ios {
+    left: 85%;
+  }
+  .chevron-wrapper svg {
+    width: 90%;
+    height: 90%;
+  }
+  
+  .chevron-wrapper svg {
+    transition: 0.2s ease-in-out;
+  }
+  
+  .chevron-wrapper:hover svg {
+    color: var(--color-gray);
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .chevron-wrapper {
+      height: 3vw;
+      width: 3vw;
+      /* right: 1vw; */
+      z-index: 4;
+      top: 90%;
+    }
+    .chevron-wrapper-ios {
+      /* right: -4vw; */
+      left: 95%;
+    }
+  }
+  

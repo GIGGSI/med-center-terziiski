@@ -1,24 +1,46 @@
-import logo from './logo.svg';
+import { useEffect, useCallback, useState } from 'react';
+
+import { setHeight } from './actions'
+import { useDispatch } from 'react-redux'
+import { Routes, Route } from "react-router-dom";
+
+import { Home } from './pages';
+import { Chevron, Footer, Navbar } from './components';
+
+import ScrollToTop from './utilities/ScrollToTop'
+
 import './App.css';
 
+
 function App() {
+  const dispatch = useDispatch()
+  const [chevron, setChevron] = useState(0)
+
+  const handleHeight = useCallback(() => {
+    dispatch(setHeight(window.scrollY))
+    setChevron(window.scrollY)
+
+  }, [dispatch])
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => handleHeight());
+
+    return () => {
+      window.removeEventListener("scroll", () => handleHeight());
+    };
+  }, [handleHeight]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ScrollToTop />
+      <Navbar />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+      </Routes>
+      {chevron > 500 && <Chevron />}
+      <Footer />
+    </>
   );
 }
 
