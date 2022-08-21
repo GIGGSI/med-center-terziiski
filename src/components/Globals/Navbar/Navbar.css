@@ -1,0 +1,251 @@
+.navbar {
+  background: white;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  font-size: 1.4rem;
+  top: 10;
+  z-index: 999;
+}
+
+.navbar-home {
+  background-color: white;
+  opacity: 0.8;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  font-size: 1.4rem;
+  top: 10;
+  z-index: 999;
+}
+
+.navbar-home-transparent {
+  background: rgba(229, 229, 229, 0.233);
+  position: fixed;
+  display: flex;
+  width: 100%;
+  font-size: 1.4rem;
+  top: 10;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+
+
+.navbar-logo-container {
+  width: 12.5vw;
+  margin-top: 0vw;
+}
+
+.navbar-logo {
+  justify-self: start;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  height: 60px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-item:hover {
+  border-bottom: 2px solid var(--primary-color)
+}
+
+.nav-links {
+  color: var(--color-gray);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 940px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 68px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    justify-content: flex-start;
+    overflow: hidden;
+    list-style-type: none;
+  }
+
+  .navbar-home {
+    background: white;
+  }
+
+  .navbar-container {
+    height: 70px;
+  }
+
+  .nav-menu.active {
+    background: white;
+    left: 0;
+    opacity: 0.95;
+    transition: all 0.6s ease;
+    z-index: 1;
+    border-bottom-right-radius: 10vw;
+    border-bottom-left-radius: 10vw;
+  }
+
+  .nav-links {
+    text-align: center;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    color: white;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+  }
+
+  .nav-item:hover {
+    border: none;
+  }
+
+  .nav-item {
+    height: 5vw;
+    margin-bottom: 5vw;
+  }
+
+  .navbar-logo-container {
+    width: 20.55vw;
+    margin-top: 1vw;
+  }
+
+  .navbar-logo {
+    z-index: 9999;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0.4rem;
+    right: 0;
+    transform: translate(-100%, 0%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: var(--primary-color);
+    font-size: 2rem;
+  }
+
+  .nav-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+  }
+
+  .save-hours {
+    display: none;
+  }
+
+  .save-hours-mobile {
+    display: block !important;
+  }
+
+  .save-hours-mobile {
+    border: 2px solid var(--primary-color);
+    padding: 1.6vw;
+    transition: 0.2s ease-in-out;
+    border-radius: 0.4vw;
+    color:var(--primary-color);
+    margin-bottom: 7vw;
+  }
+
+  .save-hours-mobile a {
+    display: flex;
+    align-items: center;
+  }
+
+  .save-hours-mobile svg {
+    margin-right: 1vw;
+    font-size: 5vw;
+  }
+
+  .navbar-home-transparent {
+    background: rgba(229, 229, 229, 0.233);
+    position: fixed;
+    display: flex;
+    width: 100%;
+    font-size: 1.4rem;
+    top: 10;
+    z-index: 999;
+  }
+}
+
+.save-hours-mobile {
+  display: none;
+}
+
+.save-hours {
+  border: 2px solid var(--primary-color);
+  padding: 0.2vw;
+  transition: 0.2s ease-in-out;
+  border-radius: 0.4vw;
+  color:var(--primary-color);
+}
+
+.save-hours a {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.save-hours svg {
+  margin-right: 0.4vw;
+  font-size: 1.4vw;
+}
+
+.save-hours:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 13px -7px #00000037,
+    0px 0px 10px 1px rgba(0, 0, 0, 0.44);
+  box-shadow: 0px 10px 13px -7px #00000037, 0px 0px 10px 1px rgba(0, 0, 0, 0.44);
+  transform: translateY(-3px);
+}
+
+@media screen and (max-width: 540px) {
+  .navbar-logo-container {
+    width: 35vw;
+  }
+}

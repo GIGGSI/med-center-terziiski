@@ -9,9 +9,6 @@ import { Chevron, Footer, Navbar } from './components';
 
 import ScrollToTop from './utilities/ScrollToTop'
 
-import './App.css';
-
-
 function App() {
   const dispatch = useDispatch()
   const [chevron, setChevron] = useState(0)

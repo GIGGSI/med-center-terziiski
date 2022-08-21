@@ -1,18 +1,6 @@
-
 :root {
-  /* --primary-color: #1abc9cb9; */
-  /* --primary-color: #099773; */
-
-  /* --primary-color:#81613da0; */
-  /* --primary-color:#1a492591; */
-  /* --primary-color: #96c7f0d0; */
-  /* --second-primary: #61afef; */
-  --second-primary: #5c6895;
-  /* --primary-color:#6fcb328a; */
-  --primary-color:#5c689590;
-  /* --primary-color: #c2a892; */
-  /* --primary-color:#4a531e99; */
-
+  /* --second-primary: #5c6895; */
+  --primary-color: #58a493;
   --color-gray: #666;
   --color-white: #ffffff;
 }
@@ -24,8 +12,13 @@
   scroll-behavior: smooth;
 }
 
-
 a {
   color: unset;
   text-decoration: none;
+}
+
+.container {
+  z-index: 1;
+  width: 80%;
+  margin: 0 auto;
 }
