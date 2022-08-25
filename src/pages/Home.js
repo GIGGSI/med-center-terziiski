@@ -1,10 +1,9 @@
 import React from 'react'
-import Header from '../components/Globals/Home/Header/Header'
-
+import { Header } from '../components'
 const Home = () => {
     return (
         <div>
-            <Header />
+            <Header id="home" />
         </div>
     )
 }

@@ -1,0 +1,17 @@
+.title-wrapper {
+  font-family: var(--font-base);
+  text-transform: capitalize;
+  font-size: 15.5vw;
+  color: var(--color-gray);
+  margin-top: 3vw;
+}
+
+.title-wrapper span {
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .title-wrapper {
+    font-size: 5.5vw;
+  }
+}
