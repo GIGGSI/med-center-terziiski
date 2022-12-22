@@ -1,5 +1,5 @@
 .slider-section {
-  height: 100vh;
+  /* height: 90vh; */
   max-height: 1100px;
   position: relative;
   overflow: hidden;
@@ -7,7 +7,7 @@
 
 .hero-wrapper {
   width: 100%;
-  height: 100%;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,8 +43,8 @@
 
 .slider-buttons {
   position: absolute;
-  bottom: 2vw;
-  right: 50px;
+  bottom: 30vw;
+  right: 0px;
   display: flex;
   z-index: 10;
 }
@@ -73,6 +73,12 @@
 @media screen and (min-width: 630px) {
   .arrow-buttons {
     cursor: pointer;
+  }
+  .slider-buttons {
+    bottom: 4vw;
+    right: 50px;
+    display: flex;
+    z-index: 10;
   }
 
   .hero-wrapper-slider-text {

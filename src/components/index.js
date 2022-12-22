@@ -3,6 +3,7 @@ import Navbar from "./Globals/Navbar/Navbar";
 import Chevron from "./Globals/Chevron/Chevron";
 import HamburgerIcon from './UI/HamburgerIcon/HamburgerIcon'
 import Header from './Home/Header/Header'
+import Aboutus from "./Home/AboutIUs/Aboutus";
 
 
 export {
@@ -10,5 +11,6 @@ export {
     Footer,
     Chevron,
     HamburgerIcon,
-    Header
+    Header,
+    Aboutus
 }

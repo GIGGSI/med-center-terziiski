@@ -11,6 +11,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/autoplay"
 
 import './Header.css'
+import ServicesContainer from './ServicesContainer/ServicesContainer';
 
 const Header = ({ id }) => {
     const swiper = useSwiper();
@@ -54,6 +55,7 @@ const Header = ({ id }) => {
                     </div>
                 </Swiper>
             </div>
+            <ServicesContainer />
         </div>
     )
 }

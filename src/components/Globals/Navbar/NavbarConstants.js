@@ -2,26 +2,31 @@ export const navbarLinks = [
     {
         id: 1,
         title: 'За Нас',
-        url: 'about'
+        url: 'about',
+        footerUrl: '#about'
     },
     {
         id: 2,
         title: 'Екип',
-        url: 'team'
+        url: 'team',
+        footerUrl: '#team'
     },
     {
         id: 3,
         title: 'Услуги',
-        url: 'services'
+        url: 'services',
+        footerUrl: '#services'
     },
     {
         id: 4,
         title: 'Блог',
-        url: 'blog'
+        url: 'blog',
+        footerUrl: '#blog'
     },
     {
         id: 5,
         title: 'Контакти',
-        url: 'contact'
+        url: 'contact',
+        footerUrl: '#contact'
     }
 ]

@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from 'react'
 
-import { useLocation } from 'react-router-dom'
-import { useSelector } from 'react-redux';
+import { useLocation, Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+
+import { setHeight } from '../../../actions'
 
 import { navbarLinks } from './NavbarConstants'
 import { scrollToSection } from '../../../utilities/ScrollToSection'
@@ -16,19 +17,36 @@ import { FiPhone } from 'react-icons/fi'
 import './Navbar.css'
 
 const Navbar = () => {
-    const height = useSelector(state => state.height)
-
+    const [navHeight, setNavHeigth] = useState(0)
     const [click, setClick] = useState(false);
 
     let container = React.createRef();
     let location = useLocation();
+    const dispatch = useDispatch()
+
+    const handleHeight = useCallback(() => {
+        dispatch(setHeight(window.scrollY))
+        setNavHeigth(window.scrollY)
+
+    }, [dispatch])
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => handleHeight());
+
+        return () => {
+            window.removeEventListener("scroll", () => handleHeight());
+        };
+    }, [handleHeight]);
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside)
+    });
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
-    const scrollToTop = id => {
-        scrollToSection(id)
-    }
+    const scrollToTop = id => scrollToSection(id)
 
     const handleClickOutside = (event) => {
         if (
@@ -40,14 +58,9 @@ const Navbar = () => {
         }
     };
 
-    useEffect(() => {
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside)
-    });
-
     return (
         <div className={location.pathname === '/'
-            ? height < 600 && !click
+            ? navHeight < 600 && !click
                 ? 'navbar-home-transparent'
                 : 'navbar-home'
             : 'navbar'
@@ -94,7 +107,6 @@ const Navbar = () => {
                             >
                                 {item.title}
                             </HashLink>
-
                         </li>
                     ))}
 
@@ -108,7 +120,6 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <div className='save-hours'>
-
                     <HashLink
                         to={location.pathname !== '/' ? `/#contact` : ''}
                         onClick={() => location.pathname === '/' && scrollToSection('contact')}

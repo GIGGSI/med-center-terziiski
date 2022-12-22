@@ -1,9 +1,11 @@
 import React from 'react'
-import { Header } from '../components'
+import { Aboutus, Header } from '../components'
+
 const Home = () => {
     return (
-        <div>
+        <div id='scrollContainer'>
             <Header id="home" />
+            <Aboutus id="about" />
         </div>
     )
 }
