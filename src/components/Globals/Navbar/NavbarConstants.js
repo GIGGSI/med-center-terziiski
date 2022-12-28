@@ -7,15 +7,15 @@ export const navbarLinks = [
     },
     {
         id: 2,
-        title: 'Екип',
-        url: 'team',
-        footerUrl: '#team'
-    },
-    {
-        id: 3,
         title: 'Услуги',
         url: 'services',
         footerUrl: '#services'
+    },
+    {
+        id: 3,
+        title: 'Екип',
+        url: 'team',
+        footerUrl: '#team'
     },
     {
         id: 4,

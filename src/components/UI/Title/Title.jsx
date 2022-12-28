@@ -7,6 +7,7 @@ const Title = ({ title }) => {
     return (
         <div className='title-wrapper'>
             <p>{a} <span>{b}</span> {c}</p>
+            <div className='underline'/>
         </div>
     )
 }

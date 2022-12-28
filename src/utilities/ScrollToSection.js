@@ -1,5 +1,4 @@
 export const scrollToSection = (id) => {
-    console.log(id)
     let anchorTarget = document.getElementById(id);
     if (anchorTarget) {
         anchorTarget.scrollIntoView({ behavior: "smooth", block: "start" });

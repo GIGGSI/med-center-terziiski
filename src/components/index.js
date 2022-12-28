@@ -4,6 +4,8 @@ import Chevron from "./Globals/Chevron/Chevron";
 import HamburgerIcon from './UI/HamburgerIcon/HamburgerIcon'
 import Header from './Home/Header/Header'
 import Aboutus from "./Home/AboutIUs/Aboutus";
+import Services from "./Home/Services/Services";
+import Title from "./UI/Title/Title";
 
 
 export {
@@ -12,5 +14,7 @@ export {
     Chevron,
     HamburgerIcon,
     Header,
-    Aboutus
+    Aboutus,
+    Services,
+    Title
 }

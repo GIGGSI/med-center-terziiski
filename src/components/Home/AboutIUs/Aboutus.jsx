@@ -1,6 +1,6 @@
 import React from 'react'
 import { images } from '../../../constants/images'
-
+import { Title } from '../../../components'
 import './AboutUs.css'
 
 const Aboutus = ({ id }) => {
