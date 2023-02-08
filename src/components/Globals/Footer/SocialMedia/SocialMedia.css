@@ -1,0 +1,19 @@
+.social-media-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.social-media-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-media-container a svg {
+  color: #f1f7f5;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .social-media-container {
+    gap: 1rem;
+  }
+}

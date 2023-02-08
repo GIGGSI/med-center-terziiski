@@ -1,0 +1,29 @@
+.logo-line-wrapper {
+  background-color: #F1F7F5;
+  display: flex;
+  align-items: center;
+  height: 14vw;
+}
+.logo-line-image-container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.logo-line-image-container img {
+  max-width: 40%;
+}
+
+@media screen and (min-width: 768px) {
+  .logo-line-wrapper {
+    height: 5vw;
+  }
+
+  .logo-line-image-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .logo-line-image-container img {
+    max-width: 10%;
+  }
+}
